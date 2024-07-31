@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/scrollreveal"></script>
+<title>Web Designer Portfolio</title>
+</head>
+<body>
+   <div id="includecontent"></div>
+    <header class="hero">
+       <div w3-include-html="static.html"></div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Vanshita Patil</h1>
+            <p>Web Designer & React Developer</p>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <!-- <p>I am a passionate web designer with a focus on creating beautiful and functional websites. I have experience in front-end development, especially with React. I love bringing ideas to life through code.</p> -->
+         <div class="abtimg">
+            <img src="crop.jpeg">
+         </div>
+         <div class="para">
+           <h1>I'm Vanshita </h1>
+           <h3>web designer</h3>
+           <p>I am a passionate web designer with a focus on creating beautiful and functional websites. I have experience in front-end development, especially with React. I love bringing ideas to life through code.</p>
+         </div>
+        <div class="button">
+            <button><a href="updatescv.pdf">Resume</a></button>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="hok-makeup.png" alt="Project 1">
+                <h3><a href="https://makeup-clone.netlify.app">Project 1</a></h3>
+                <p>A React-based web application for managing tasks.</p>
+            </div>
+            <div class="project-card">
+                <img src="signup.png" alt="Project 2">
+                <h3><a href="https://loginlink.netlify.app">Project 2</a></h3>
+                <p>A responsive e-commerce site designed with React and styled-components.</p>
+            </div>
+            <div class="project-card">
+                <img src="portfolio.png" alt="Project 3">
+                <h3><a href="https://vanshita-portfoilo.netlify.app">Project 3</a></h3>
+                <p>A portfolio website built with React and modern CSS techniques.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to work together or have any questions, feel free to reach out.</p>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vanshita Patil. All rights reserved.</p>
+    </footer>
+    <script src="./index.js"></script>
+   <script >
+    $(function (){
+        $("#includecontent").load("static.html")
+    })
+   </script>
+</body>
+</html>
